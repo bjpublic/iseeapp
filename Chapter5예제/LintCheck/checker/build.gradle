@@ -1,0 +1,12 @@
+apply plugin: 'java'
+
+dependencies {
+    compileOnly "com.android.tools.lint:lint-api:26.5.0"
+    compileOnly "com.android.tools.lint:lint-checks:26.5.0"
+}
+
+jar {
+    manifest {
+        attributes("Lint-Registry-v2": "com.charlezz.checker.CustomIssueRegistry")
+    }
+}
